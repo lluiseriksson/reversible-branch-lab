@@ -1,0 +1,269 @@
+{
+  "status": "PASS",
+  "observed_utc": "2026-10-24T04:21:54.594266+00:00",
+  "Python": "3.12.14",
+  "scope": "Finite supplied-flag controlled oracles. Original arithmetic DAG versus independent reconstruction of the described prefix traversal; not execution of upstream engine or a complete point adder. Identical Toffoli cost model, with measurement-based cleanup explicitly distinguished from unitary cleanup.",
+  "rows": [
+    {
+      "depth": 5,
+      "models": {
+        "arithmetic_unitary": {
+          "Toffoli": 47,
+          "CNOT": 598,
+          "X": 0,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 25,
+          "qubits": 35,
+          "oracle_TQ": 1645,
+          "gate_sha256": "f92fd0f2f7fc1a8c4b79e47ed8a61a2147b47a2d7ec019400c384878b4d75ee8",
+          "parallel_complete_basis_cases": 1024,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "arithmetic_MBU": {
+          "Toffoli": 24,
+          "CNOT": 598,
+          "X": 0,
+          "measurements": 23,
+          "classically_conditioned_CZ": 23,
+          "workspace": 25,
+          "qubits": 35,
+          "oracle_TQ": 840,
+          "gate_sha256": "e587bc755a48b763fa784720e07d82d9db8c5aa87800e92e02a0e54d709b9f73",
+          "parallel_complete_basis_cases": 1024,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        },
+        "prefix_reconstruction_unitary": {
+          "Toffoli": 50,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 2,
+          "qubits": 12,
+          "oracle_TQ": 600,
+          "gate_sha256": "ff25c3500cc8e05e427579e96c2aee35e8996354d41a8f6af9cc6e42b77f7c36",
+          "parallel_complete_basis_cases": 1024,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "prefix_reconstruction_MBU": {
+          "Toffoli": 38,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 12,
+          "classically_conditioned_CZ": 12,
+          "workspace": 2,
+          "qubits": 12,
+          "oracle_TQ": 456,
+          "gate_sha256": "51ca9c82a0a5f976236e4dc31fcba8542689b8f1608ca862761e2b8d70ba050d",
+          "parallel_complete_basis_cases": 1024,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        }
+      }
+    },
+    {
+      "depth": 6,
+      "models": {
+        "arithmetic_unitary": {
+          "Toffoli": 101,
+          "CNOT": 2056,
+          "X": 2,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 52,
+          "qubits": 64,
+          "oracle_TQ": 6464,
+          "gate_sha256": "a8decc676bb201594deb5e68f36d7a9e2b1d9daca79566b0368e4f496b4f3937",
+          "parallel_complete_basis_cases": 4096,
+          "complete_basis_tests": 4096,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "arithmetic_MBU": {
+          "Toffoli": 51,
+          "CNOT": 2056,
+          "X": 2,
+          "measurements": 50,
+          "classically_conditioned_CZ": 50,
+          "workspace": 52,
+          "qubits": 64,
+          "oracle_TQ": 3264,
+          "gate_sha256": "f40a0a1152ce23fcc1518a47ea352d57f24732c970e48657b0cbf862394d587a",
+          "parallel_complete_basis_cases": 4096,
+          "complete_basis_tests": 4096,
+          "all_measurement_records_symbolically_checked": true
+        },
+        "prefix_reconstruction_unitary": {
+          "Toffoli": 170,
+          "CNOT": 1,
+          "X": 0,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 3,
+          "qubits": 15,
+          "oracle_TQ": 2550,
+          "gate_sha256": "406379b66cd9ad75ab6069682baaf3ae2a6c37376a65a7352d50f0eebc0e8077",
+          "parallel_complete_basis_cases": 4096,
+          "complete_basis_tests": 4096,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "prefix_reconstruction_MBU": {
+          "Toffoli": 124,
+          "CNOT": 1,
+          "X": 0,
+          "measurements": 46,
+          "classically_conditioned_CZ": 46,
+          "workspace": 3,
+          "qubits": 15,
+          "oracle_TQ": 1860,
+          "gate_sha256": "f33a1af7585a235b6725a65a80bd3c0da553129fee4276ebff3945c60c4755fd",
+          "parallel_complete_basis_cases": 4096,
+          "complete_basis_tests": 4096,
+          "all_measurement_records_symbolically_checked": true
+        }
+      }
+    },
+    {
+      "depth": 7,
+      "models": {
+        "arithmetic_unitary": {
+          "Toffoli": 167,
+          "CNOT": 4646,
+          "X": 10,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 85,
+          "qubits": 99,
+          "oracle_TQ": 16533,
+          "gate_sha256": "11318eb2f57e5684f169bff887a7217e77d7122eb999a22d31155ffbbd0bae44",
+          "parallel_complete_basis_cases": 16384,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "arithmetic_MBU": {
+          "Toffoli": 84,
+          "CNOT": 4646,
+          "X": 10,
+          "measurements": 83,
+          "classically_conditioned_CZ": 83,
+          "workspace": 85,
+          "qubits": 99,
+          "oracle_TQ": 8316,
+          "gate_sha256": "f9d7582be65fb22c248ce74779007025323f6c0845ee2ee78b45338118d8219a",
+          "parallel_complete_basis_cases": 16384,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        },
+        "prefix_reconstruction_unitary": {
+          "Toffoli": 592,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 4,
+          "qubits": 18,
+          "oracle_TQ": 10656,
+          "gate_sha256": "9dc6aa23f4e5001b25934e4126af7d607ed00c1665e3cf8ba02ff5af63f5a317",
+          "parallel_complete_basis_cases": 16384,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "prefix_reconstruction_MBU": {
+          "Toffoli": 430,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 162,
+          "classically_conditioned_CZ": 162,
+          "workspace": 4,
+          "qubits": 18,
+          "oracle_TQ": 7740,
+          "gate_sha256": "fb8a82a88caa96405fd6a3c38e3c01ac0945802775b7069ae006919ebb2d84f8",
+          "parallel_complete_basis_cases": 16384,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        }
+      }
+    },
+    {
+      "depth": 8,
+      "models": {
+        "arithmetic_unitary": {
+          "Toffoli": 247,
+          "CNOT": 8974,
+          "X": 52,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 125,
+          "qubits": 141,
+          "oracle_TQ": 34827,
+          "gate_sha256": "f1f59471a6ece27b0175d4b419476d272f1d97b45cf2eb6db03473d3ac200d7c",
+          "parallel_complete_basis_cases": 65536,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "arithmetic_MBU": {
+          "Toffoli": 124,
+          "CNOT": 8974,
+          "X": 52,
+          "measurements": 123,
+          "classically_conditioned_CZ": 123,
+          "workspace": 125,
+          "qubits": 141,
+          "oracle_TQ": 17484,
+          "gate_sha256": "8f0a6aefbb2863b1deea453a15bc4b71d4ee910db1c57d9e4d347e486dc61ede",
+          "parallel_complete_basis_cases": 65536,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        },
+        "prefix_reconstruction_unitary": {
+          "Toffoli": 2322,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 0,
+          "classically_conditioned_CZ": 0,
+          "workspace": 6,
+          "qubits": 22,
+          "oracle_TQ": 51084,
+          "gate_sha256": "a2c032eee2b51d73fd9817d69d2d98530809093923f3db6827fe46daf43c0b12",
+          "parallel_complete_basis_cases": 65536,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": false
+        },
+        "prefix_reconstruction_MBU": {
+          "Toffoli": 1707,
+          "CNOT": 0,
+          "X": 0,
+          "measurements": 615,
+          "classically_conditioned_CZ": 615,
+          "workspace": 6,
+          "qubits": 22,
+          "oracle_TQ": 37554,
+          "gate_sha256": "bc8cc94714f49d077dd263eef90a723fae0f429b6e42ba9612dfa84fdecba3ad",
+          "parallel_complete_basis_cases": 65536,
+          "complete_basis_tests": 0,
+          "all_measurement_records_symbolically_checked": true
+        }
+      }
+    }
+  ],
+  "negative_phase_controls": [
+    {
+      "family": "arithmetic",
+      "mutation": "omit first conditional CZ",
+      "witness_input": 1,
+      "detected": true
+    },
+    {
+      "family": "prefix_reconstruction",
+      "mutation": "omit first conditional CZ",
+      "witness_input": 96,
+      "detected": true
+    }
+  ],
+  "record_model": "Independent X-measurement outcomes; only conditional diagonal phase corrections. Exact phase bitmask covers every measurement record for each enumerated basis input.",
+  "excluded": "Depth-flag creation, data routing, register packing, complete walk, predicate death after later use, hardware error correction, physical time, upstream global gate counts and optimized resource superiority.",
+  "novelty_or_paper_score": null
+}

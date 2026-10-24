@@ -19,7 +19,7 @@ with tempfile.TemporaryDirectory(prefix='branch-replay-') as temporary:
     work=Path(temporary).resolve()
     assert work.is_relative_to(Path(tempfile.gettempdir()).resolve())
     assert work.name.startswith('branch-replay-')
-    for program in ['branch_replay.py','anf_diagnostic.py','clean_decoder.py']:
+    for program in ['branch_replay.py','anf_diagnostic.py','clean_decoder.py','compare_models.py']:
         shutil.copy2(ROOT/'src'/program,work/program)
         run=subprocess.run([sys.executable,'-B',str(work/program)],cwd=work,capture_output=True,text=True,encoding='utf-8',check=True)
         result=json.loads(run.stdout)

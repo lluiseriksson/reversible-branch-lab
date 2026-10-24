@@ -99,27 +99,31 @@ def simulate(gates,state):
             if state>>gate[1]&1 and state>>gate[2]&1:state^=1<<gate[3]
     return state
 
-prime=2**256-2**32-977
-rows=[]
-for j in range(2,9):
-    n=j-1;dag=DAG(2*n);out=dag.prune(dag.oracle(j,prime));gates,layout=dag.gates(out)
-    for bits in range(1<<(2*n)):
-        f=1+2*(bits&((1<<n)-1));q=1+2*(bits>>n)
-        expected=((prime*pow(f*q,-1,1<<j))%(1<<j))>>(j-1)
-        assert dag.evaluate(bits,out)==expected
-    simulations=0
-    if j==6:
+def run_reference():
+    prime=2**256-2**32-977
+    rows=[]
+    for j in range(2,9):
+        n=j-1;dag=DAG(2*n);out=dag.prune(dag.oracle(j,prime));gates,layout=dag.gates(out)
         for bits in range(1<<(2*n)):
-            answer=dag.evaluate(bits,out)
-            for flag in (0,1):
-                for target in (0,1):
-                    state=bits|(target<<layout['target'])|(flag<<layout['flag'])
-                    expected=state^((answer&flag)<<layout['target'])
-                    assert simulate(gates,state)==expected
-                    simulations+=1
-        packet={'depth':j,'layout':layout,'gates':gates,'claim':'Clean controlled oracle for the prior A11 function; primitive permutation gates have no relative phases. Workspace starts and ends zero. Not the complete divstep walk.'}
-        Path(__file__).with_name('depth6-gates.json').write_text(json.dumps(packet,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
-    rows.append({'depth':j,'oracle_inputs_checked':1<<(2*n),'DAG_AND_nodes':len(dag.nodes),'Toffoli_count':sum(g[0]=='CCX' for g in gates),'CNOT_count':sum(g[0]=='CX' for g in gates),'X_count':sum(g[0]=='X' for g in gates),'workspace_qubits':len(dag.nodes)+2,'total_qubits':layout['qubits'],'controlled_clean_gate_basis_tests':simulations,'gate_list_sha256':hashlib.sha256(json.dumps(gates,separators=(',',':')).encode()).hexdigest()})
-result={'observed_utc':datetime.now(timezone.utc).isoformat(),'Python':platform.python_version(),'status':'PASS','scope':'Original naive compute-copy-uncompute baseline for a published decision formula. All oracle inputs depth2..8 checked, full controlled gate action and zero-workspace return exhaustively checked at depth6. Gates are X/CNOT/Toffoli, so no hidden relative phase. This is not the published optimized circuit, complete inversion algorithm, hardware model or formal assistant proof.','rows':rows,'research_disposition':'No superiority established. Retaining all nonlinear nodes is expensive in workspace. A comparison with the actual factored baseline and a useful low-workspace schedule is still required; ANF term count is not an optimal-circuit bound.'}
-Path(__file__).with_suffix('.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
-print(json.dumps(result))
+            f=1+2*(bits&((1<<n)-1));q=1+2*(bits>>n)
+            expected=((prime*pow(f*q,-1,1<<j))%(1<<j))>>(j-1)
+            assert dag.evaluate(bits,out)==expected
+        simulations=0
+        if j==6:
+            for bits in range(1<<(2*n)):
+                answer=dag.evaluate(bits,out)
+                for flag in (0,1):
+                    for target in (0,1):
+                        state=bits|(target<<layout['target'])|(flag<<layout['flag'])
+                        expected=state^((answer&flag)<<layout['target'])
+                        assert simulate(gates,state)==expected
+                        simulations+=1
+            packet={'depth':j,'layout':layout,'gates':gates,'claim':'Clean controlled oracle for the prior A11 function; primitive permutation gates have no relative phases. Workspace starts and ends zero. Not the complete divstep walk.'}
+            Path(__file__).with_name('depth6-gates.json').write_text(json.dumps(packet,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
+        rows.append({'depth':j,'oracle_inputs_checked':1<<(2*n),'DAG_AND_nodes':len(dag.nodes),'Toffoli_count':sum(g[0]=='CCX' for g in gates),'CNOT_count':sum(g[0]=='CX' for g in gates),'X_count':sum(g[0]=='X' for g in gates),'workspace_qubits':len(dag.nodes)+2,'total_qubits':layout['qubits'],'controlled_clean_gate_basis_tests':simulations,'gate_list_sha256':hashlib.sha256(json.dumps(gates,separators=(',',':')).encode()).hexdigest()})
+    result={'observed_utc':datetime.now(timezone.utc).isoformat(),'Python':platform.python_version(),'status':'PASS','scope':'Original naive compute-copy-uncompute baseline for a published decision formula. All oracle inputs depth2..8 checked, full controlled gate action and zero-workspace return exhaustively checked at depth6. Gates are X/CNOT/Toffoli, so no hidden relative phase. This is not the published optimized circuit, complete inversion algorithm, hardware model or formal assistant proof.','rows':rows,'research_disposition':'No superiority established. Retaining all nonlinear nodes is expensive in workspace. A comparison with the actual factored baseline and a useful low-workspace schedule is still required; ANF term count is not an optimal-circuit bound.'}
+    Path(__file__).with_suffix('.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
+    print(json.dumps(result))
+
+if __name__ == '__main__':
+    run_reference()
