@@ -1,5 +1,5 @@
 {
-  "schema": "finite-branch-reference-1",
+  "schema": "finite-branch-reference-2",
   "observed_on": "2026-10-24",
   "formula_origin": "Gu et al. arXiv2610.22367v1 AppendixA",
   "source_implementation": "Original by Lluis Eriksson research workflow with Codex assistance",
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "5e9b4bc0b9bc265f4f9a0cec7877bb79b3e3fe966327cb5b4be8d71b68f28772",
-      "bytes": 3790
+      "sha256": "a9f6e67e868f1c052822cbcc74cae7c28549306e028473ee7f74d73988148269",
+      "bytes": 6192
     },
     {
       "path": "results/anf_diagnostic.json",
@@ -49,6 +49,11 @@
       "path": "results/clean_decoder.json",
       "sha256": "007c4efe593d9e6b3e6ad3ee928808b74013b039991574d8c6b7fa198b64f18b",
       "bytes": 3296
+    },
+    {
+      "path": "results/compare_models.json",
+      "sha256": "9a092b9135a37301504fbd1d95fe5c13ad211b45c3edd2f9be6b3c7022214925",
+      "bytes": 9585
     },
     {
       "path": "results/depth6-gates.json",
@@ -67,13 +72,18 @@
     },
     {
       "path": "src/clean_decoder.py",
-      "sha256": "869da16b41b09a163ec1f58bd731ce338071e3f196f97745fa16d1e48231174c",
-      "bytes": 6510
+      "sha256": "431307f7bbf2a32fe9e4d638e0d54728f7e24e4f287860f6d17f59676d4da198",
+      "bytes": 6675
+    },
+    {
+      "path": "src/compare_models.py",
+      "sha256": "800a5509580c22d97b8991af9cdd99dea4b16c41df6385188a6feb446eae25b4",
+      "bytes": 8484
     },
     {
       "path": "verify.py",
-      "sha256": "b97d011c4b83ca6197b6ba5140b0f4cf82488e8f63812bc151da427d42ff2bed",
-      "bytes": 1883
+      "sha256": "6be2c881009b7dcba206a6967d24fb78adec1fba637668be83fe319e8da413a2",
+      "bytes": 1903
     }
   ]
 }
