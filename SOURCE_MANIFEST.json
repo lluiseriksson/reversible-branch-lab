@@ -1,0 +1,79 @@
+{
+  "schema": "finite-branch-reference-1",
+  "observed_on": "2026-10-24",
+  "formula_origin": "Gu et al. arXiv2610.22367v1 AppendixA",
+  "source_implementation": "Original by Lluis Eriksson research workflow with Codex assistance",
+  "research_capsule_ready": false,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "bytes": 19
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "78c87b5cc67b0b7ad3e63c5b4e53d0b98df6473a6094dd30f56b75ca5a2c301f",
+      "bytes": 596
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "2f6f90f5c8c8716ee636633e870c1d61184267644f36b2a83a5198309c67139a",
+      "bytes": 25
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "bec5b62e56457dd098176955ba827cdc713a9e860beb1ff8253d2b92123a1348",
+      "bytes": 1105
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "25277fb0c7e4e0310a93c1e717b1b5fa42c72b843b66e01ed3cf0f5e148cf3c2",
+      "bytes": 1070
+    },
+    {
+      "path": "README.md",
+      "sha256": "5e9b4bc0b9bc265f4f9a0cec7877bb79b3e3fe966327cb5b4be8d71b68f28772",
+      "bytes": 3790
+    },
+    {
+      "path": "results/anf_diagnostic.json",
+      "sha256": "e1186119d4113628031701dc1479b59e38e2891564a52241f08f5c6720130e59",
+      "bytes": 2317
+    },
+    {
+      "path": "results/branch_replay.json",
+      "sha256": "1b91ef97a988ed214874f46fc46794dea4e5f7fc4a6301d6dab2cb8464bf3f97",
+      "bytes": 582
+    },
+    {
+      "path": "results/clean_decoder.json",
+      "sha256": "007c4efe593d9e6b3e6ad3ee928808b74013b039991574d8c6b7fa198b64f18b",
+      "bytes": 3296
+    },
+    {
+      "path": "results/depth6-gates.json",
+      "sha256": "88a37af61f4f8359d51f349c19bd232f3bdfaf8850e57ba47b2294f261e8c5a9",
+      "bytes": 28140
+    },
+    {
+      "path": "src/anf_diagnostic.py",
+      "sha256": "4f82b33b2b5890657c6cfadd5edaded126d28a45ca3fef77e3322f04c4b9c6e6",
+      "bytes": 2094
+    },
+    {
+      "path": "src/branch_replay.py",
+      "sha256": "42fe7e1a70b1ee4af9f5d4f4ef62126fbed974bd087d7a0de92cead68a2ffb0b",
+      "bytes": 2474
+    },
+    {
+      "path": "src/clean_decoder.py",
+      "sha256": "869da16b41b09a163ec1f58bd731ce338071e3f196f97745fa16d1e48231174c",
+      "bytes": 6510
+    },
+    {
+      "path": "verify.py",
+      "sha256": "b97d011c4b83ca6197b6ba5140b0f4cf82488e8f63812bc151da427d42ff2bed",
+      "bytes": 1883
+    }
+  ]
+}

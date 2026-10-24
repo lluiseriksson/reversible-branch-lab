@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "https://arxiv.org/html/2610.22367v1#A1",
+  "range": "Every odd modulus3..127 and every integer input0<=w<p",
+  "checks": {
+    "inputs": 4095,
+    "active_steps": 47168,
+    "ambiguous_decisions": 12918,
+    "max_steps": 16
+  },
+  "scope": "Finite integer recurrence and backward decoding only. Composite moduli included. No quantum gate, phase, ancilla, resource, confidence, universal-proof or new-discovery claim.",
+  "implementation": "Original small reproduction of previously published formulas A2 and A11; no third-party program copied."
+}

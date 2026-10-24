@@ -1,0 +1,81 @@
+{
+  "observed_utc": "2026-10-24T03:58:08.935885+00:00",
+  "primary_source": "https://arxiv.org/html/2610.22367v1",
+  "scope": "Small exact oracle truth tables and their unique algebraic normal forms. Published A11 formula, published depth2..8 term counts. Depth9..10 are finite extensions, not an optimal circuit or new theorem. No phase/ancilla/gate/resource/novelty claim.",
+  "Python": "3.12.14",
+  "rows": [
+    {
+      "depth": 2,
+      "Boolean_inputs": 4,
+      "ANF_terms": 3,
+      "algebraic_degree": 1,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 3,
+      "Boolean_inputs": 16,
+      "ANF_terms": 3,
+      "algebraic_degree": 1,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 4,
+      "Boolean_inputs": 64,
+      "ANF_terms": 11,
+      "algebraic_degree": 2,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 5,
+      "Boolean_inputs": 256,
+      "ANF_terms": 26,
+      "algebraic_degree": 3,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 6,
+      "Boolean_inputs": 1024,
+      "ANF_terms": 79,
+      "algebraic_degree": 4,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 7,
+      "Boolean_inputs": 4096,
+      "ANF_terms": 268,
+      "algebraic_degree": 5,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 8,
+      "Boolean_inputs": 16384,
+      "ANF_terms": 1092,
+      "algebraic_degree": 7,
+      "agrees_with_prior_count": true,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 9,
+      "Boolean_inputs": 65536,
+      "ANF_terms": 4182,
+      "algebraic_degree": 9,
+      "agrees_with_prior_count": false,
+      "truth_table_roundtrip": "PASS"
+    },
+    {
+      "depth": 10,
+      "Boolean_inputs": 262144,
+      "ANF_terms": 15966,
+      "algebraic_degree": 11,
+      "agrees_with_prior_count": false,
+      "truth_table_roundtrip": "PASS"
+    }
+  ],
+  "next_falsifier": "Compare a complete clean decoder with the actual published factored circuit under identical controls and workspace. ANF term count is not a circuit lower bound."
+}

@@ -1,0 +1,93 @@
+{
+  "observed_utc": "2026-10-24T04:00:58.513004+00:00",
+  "Python": "3.12.14",
+  "status": "PASS",
+  "scope": "Original naive compute-copy-uncompute baseline for a published decision formula. All oracle inputs depth2..8 checked, full controlled gate action and zero-workspace return exhaustively checked at depth6. Gates are X/CNOT/Toffoli, so no hidden relative phase. This is not the published optimized circuit, complete inversion algorithm, hardware model or formal assistant proof.",
+  "rows": [
+    {
+      "depth": 2,
+      "oracle_inputs_checked": 4,
+      "DAG_AND_nodes": 0,
+      "Toffoli_count": 1,
+      "CNOT_count": 4,
+      "X_count": 2,
+      "workspace_qubits": 2,
+      "total_qubits": 6,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "93b485a96524f46510ff549f95ff1ceafc72db7f0b6c5840120d818d6328c1b6"
+    },
+    {
+      "depth": 3,
+      "oracle_inputs_checked": 16,
+      "DAG_AND_nodes": 0,
+      "Toffoli_count": 1,
+      "CNOT_count": 4,
+      "X_count": 2,
+      "workspace_qubits": 2,
+      "total_qubits": 8,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "9508a145c0d5f0a87ba2bd6b939562bff4a0c30db565cc4abcde57bfa213d308"
+    },
+    {
+      "depth": 4,
+      "oracle_inputs_checked": 64,
+      "DAG_AND_nodes": 6,
+      "Toffoli_count": 13,
+      "CNOT_count": 74,
+      "X_count": 2,
+      "workspace_qubits": 8,
+      "total_qubits": 16,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "5f3adacc662fa29f87134486e14db1887a657c915980b46b198fbfd5a85272f5"
+    },
+    {
+      "depth": 5,
+      "oracle_inputs_checked": 256,
+      "DAG_AND_nodes": 23,
+      "Toffoli_count": 47,
+      "CNOT_count": 598,
+      "X_count": 0,
+      "workspace_qubits": 25,
+      "total_qubits": 35,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "f92fd0f2f7fc1a8c4b79e47ed8a61a2147b47a2d7ec019400c384878b4d75ee8"
+    },
+    {
+      "depth": 6,
+      "oracle_inputs_checked": 1024,
+      "DAG_AND_nodes": 50,
+      "Toffoli_count": 101,
+      "CNOT_count": 2056,
+      "X_count": 2,
+      "workspace_qubits": 52,
+      "total_qubits": 64,
+      "controlled_clean_gate_basis_tests": 4096,
+      "gate_list_sha256": "a8decc676bb201594deb5e68f36d7a9e2b1d9daca79566b0368e4f496b4f3937"
+    },
+    {
+      "depth": 7,
+      "oracle_inputs_checked": 4096,
+      "DAG_AND_nodes": 83,
+      "Toffoli_count": 167,
+      "CNOT_count": 4646,
+      "X_count": 10,
+      "workspace_qubits": 85,
+      "total_qubits": 99,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "11318eb2f57e5684f169bff887a7217e77d7122eb999a22d31155ffbbd0bae44"
+    },
+    {
+      "depth": 8,
+      "oracle_inputs_checked": 16384,
+      "DAG_AND_nodes": 123,
+      "Toffoli_count": 247,
+      "CNOT_count": 8974,
+      "X_count": 52,
+      "workspace_qubits": 125,
+      "total_qubits": 141,
+      "controlled_clean_gate_basis_tests": 0,
+      "gate_list_sha256": "f1f59471a6ece27b0175d4b419476d272f1d97b45cf2eb6db03473d3ac200d7c"
+    }
+  ],
+  "research_disposition": "No superiority established. Retaining all nonlinear nodes is expensive in workspace. A comparison with the actual factored baseline and a useful low-workspace schedule is still required; ANF term count is not an optimal-circuit bound."
+}
